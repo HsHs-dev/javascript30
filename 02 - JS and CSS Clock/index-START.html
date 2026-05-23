@@ -65,7 +65,8 @@
         top: 50%;
         /* change the origin to the right center so it rotate around it */
         transform-origin: right;
-        transition: all 0.05s;
+        /* this following line causes the seconds analog to jitter to 180 degress when completing a full cycle*/
+        /* transition: all 0.05s; */
         transition-timing-function: cubic-bezier(0.1, 2.7, 0.58, 1);
       }
 
