@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Scoped CSS Variables and JS</title>
+    <link rel="icon" href="https://fav.farm/❤️‍🔥" />
+    <script src="./script.js" defer></script>
+  </head>
+  <body>
+    <h2>Update CSS Variables with <span class="hl">JS</span></h2>
+
+    <div class="controls">
+      <label for="spacing">Spacing:</label>
+      <input
+        id="spacing"
+        type="range"
+        name="spacing"
+        min="10"
+        max="200"
+        value="10"
+        data-sizing="px"
+      />
+
+      <label for="brightness">Brightness:</label>
+      <input
+        id="brightness"
+        type="range"
+        name="brightness"
+        min="0"
+        max="100"
+        value="50"
+        data-sizing="%"
+      />
+
+      <label for="back-color">Base Color</label>
+      <input id="back-color" type="color" name="back-color" value="#edf3af" />
+    </div>
+
+    <img src="./timo-wielink-5SdP5Vm8l1I-unsplash.jpg" />
+
+    <style>
+      :root {
+        --back-color: #edf3af;
+        --spacing: 10px;
+        --brightness: 50%;
+      }
+
+      img {
+        max-width: 45%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+        padding: var(--spacing);
+        background: var(--back-color);
+        filter: brightness(var(--brightness));
+      }
+
+      .hl {
+        color: var(--back-color);
+      }
+
+      /*
+      misc styles, nothing to do with CSS variables
+      */
+
+      body {
+        text-align: center;
+        background: #193549;
+        color: white;
+        font-family: "helvetica neue", sans-serif;
+        font-weight: 100;
+        font-size: 50px;
+      }
+
+      .controls {
+        margin-bottom: 50px;
+      }
+
+      input {
+        width: 100px;
+      }
+    </style>
+
+    <script></script>
+  </body>
+</html>
