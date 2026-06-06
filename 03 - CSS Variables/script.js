@@ -6,8 +6,6 @@ function handleUpdate() {
     `--${this.name}`,
     this.value + suffix,
   );
-
-  console.log(`--${this.name}`, this.value + suffix);
 }
 
 inputs.forEach((input) => {

@@ -19,5 +19,6 @@ Also I am learning Full Stack development using _University of Helsinki_ [Full S
 | 01  | **JavaScript Animals Kit** | DOM manipulation, audio playback, keyboard events |
 | 02  | **JS and CSS Clock**       | `setInterval`, CSS transforms, `Date` API         |
 | 03  | **CSS Variables**          | CSS custom properties, `input` events, `dataset`  |
+| 04  | **Array Cardio**           | Practice Array functions                          |
 
 ---
