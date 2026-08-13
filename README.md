@@ -8,7 +8,7 @@ A collection of small vanilla JavaScript projects, built while working through [
 
 Frameworks are great, but in order to be a great web developer you have to remove that layer of abstraction and work with the web on the metal level, manipulating the DOM directly, adding event listeners manually and so on.
 
-Also I am learning Full Stack development using _University of Helsinki_ [Full Stack Open course](https://fullstackopen.com/en/), but they don't have a dedicated section that teaches JavaScript, so I had to pick it on my own, along with _[Eloquent JavaScript](https://eloquentjavascript.net/)_ book.
+Also I am learning Full Stack development using _University of Helsinki_ [Full Stack Open course](https://fullstackopen.com/en/) along with (currently) in-depth Frontend Development learning through _University of Wisconsin–Madison_ [CS571: Building User Interfaces](https://cs571.org/), but they don't have a dedicated section that teaches JavaScript, so I had to pick it on my own, along with _[Eloquent JavaScript](https://eloquentjavascript.net/)_ book.
 
 ---
 
@@ -20,5 +20,6 @@ Also I am learning Full Stack development using _University of Helsinki_ [Full S
 | 02  | **JS and CSS Clock**       | `setInterval`, CSS transforms, `Date` API           |
 | 03  | **CSS Variables**          | CSS custom properties, `input` events, `dataset`    |
 | 04  | **Array Cardio**           | Practice Array functions, filter, map, reduce.. etc |
+| 05  | **Flex Panels**            | Master flex box and transitions                     |
 
 ---
