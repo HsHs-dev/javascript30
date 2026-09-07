@@ -22,5 +22,7 @@ Also I am learning Full Stack development using _University of Helsinki_ [Full S
 | 04  | **Array Cardio**           | Practice Array functions, filter, map, reduce.. etc |
 | 05  | **Flex Panels**            | Master flex box and transitions                     |
 | 06  | **Ajax Type Ahead**        | fetch data and display them nicely                  |
+| 07  | **Array Cardio 2**         | Practice Array functions, some, every, find.. etc   |
+| 08  | **Fun with HTML5 Canvas**  | Experminting with HTML5 canvas                      |
 
 ---
