@@ -21,5 +21,6 @@ Also I am learning Full Stack development using _University of Helsinki_ [Full S
 | 03  | **CSS Variables**          | CSS custom properties, `input` events, `dataset`    |
 | 04  | **Array Cardio**           | Practice Array functions, filter, map, reduce.. etc |
 | 05  | **Flex Panels**            | Master flex box and transitions                     |
+| 06  | **Ajax Type Ahead**        | fetch data and display them nicely                  |
 
 ---

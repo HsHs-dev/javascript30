@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Type Ahead 👀</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <form class="search-form">
+      <input type="text" id="search" placeholder="City or State" />
+      <ul class="suggestions">
+        <li>Filter for a city</li>
+        <li>or a state</li>
+      </ul>
+    </form>
+    <script>
+      const endpoint =
+        "https://raw.githubusercontent.com/lutangar/cities.json/refs/heads/master/cities.json";
+
+      let cities = [];
+      fetch(endpoint)
+        .then((res) => res.json())
+        .then((data) => (cities = data));
+
+      function findMatches(cityToMatch, cities) {
+        const regex = new RegExp(cityToMatch, "gi");
+        return cities.filter((city) => city.name.match(regex)).slice(0, 100);
+      }
+
+      function displayMatches() {
+        const matches = findMatches(this.value, cities);
+        const suggestions = document.querySelector(".suggestions");
+        const html = matches
+          .map((city) => {
+            const regex = new RegExp(this.value, "gi");
+            const cityName = city.name.replace(
+              regex,
+              `<span class="hl">${this.value}</span>`,
+            );
+            return `
+                  <li>
+            <span class="name">${cityName}</span>
+            <span class="population">lat: ${city.lat}</span>
+            <span class="population">lng: ${city.lng}</span>
+            </li>
+                  `;
+          })
+          .join("");
+        suggestions.innerHTML = html;
+      }
+
+      const input = document.querySelector("#search");
+      input.addEventListener("change", displayMatches);
+      input.addEventListener("keyup", displayMatches);
+    </script>
+  </body>
+</html>
