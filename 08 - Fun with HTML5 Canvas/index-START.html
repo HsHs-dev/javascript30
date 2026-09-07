@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>HTML5 Canvas</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <canvas id="draw" width="800" height="800"></canvas>
+    <script>
+      document.body.style.overflow = "hidden";
+
+      const canvas = document.querySelector("#draw");
+      const ctx = canvas.getContext("2d");
+
+      canvas.width = window.screen.width;
+      canvas.height = window.screen.height;
+
+      ctx.lineCap = "round";
+      ctx.lineJoin = "round";
+      ctx.strokeStyle = "#dc143c";
+      ctx.lineWidth = 1;
+
+      let isDrawing = false;
+      let lastX = 0;
+      let lastY = 0;
+      let hue = 0;
+      let cease = false;
+
+      function draw(e) {
+        if (!isDrawing) return;
+        ctx.strokeStyle = `hsl(${hue}, 100%, 50%)`;
+        ctx.beginPath();
+        ctx.moveTo(lastX, lastY);
+        ctx.lineTo(e.offsetX, e.offsetY);
+        ctx.stroke();
+        lastX = e.offsetX;
+        lastY = e.offsetY;
+        hue++;
+        if (hue >= 360) hue = 0;
+        if (ctx.lineWidth === 50) cease = true;
+        if (!cease) ctx.lineWidth++;
+      }
+
+      canvas.addEventListener("mousedown", (e) => {
+        if (e.button === 0) isDrawing = true;
+        [lastX, lastY] = [e.offsetX, e.offsetY];
+      });
+
+      canvas.addEventListener("mousemove", draw);
+
+      canvas.addEventListener("mouseup", (e) => {
+        if (e.button === 0) isDrawing = false;
+        cease = false;
+        ctx.lineWidth = 1;
+      });
+      canvas.addEventListener("mouseout", (e) => {
+        if (e.button === 0) isDrawing = false;
+      });
+      canvas.addEventListener("mousedown", (e) => {
+        if (e.button === 2) ctx.clearRect(0, 0, canvas.width, canvas.height);
+      });
+
+      document.addEventListener("contextmenu", (e) => e.preventDefault());
+    </script>
+
+    <style>
+      html,
+      body {
+        margin: 0;
+      }
+    </style>
+  </body>
+</html>
