@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Console Tricks!</title>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <p onClick="makeGreen()">×BREAK×DOWN×</p>
+
+    <script>
+      const dogs = [
+        { name: "Snickers", age: 2 },
+        { name: "hugo", age: 8 },
+      ];
+
+      function makeGreen() {
+        const p = document.querySelector("p");
+        p.style.color = "#BADA55";
+        p.style.fontSize = "50px";
+      }
+
+      /* console.something */
+
+      // Regular
+      console.log("hello sailor");
+
+      // Interpolated
+      const name = "Hassan 💩";
+      console.log("hello %s", name);
+
+      // Styled
+      console.log("%c This is a big red text", "font-size: 50px; color: red");
+
+      // warning!
+      console.warn("بليد");
+
+      // Error :|
+      console.error("قلت ليك انت بليد");
+
+      // Info
+      console.info("عارف؟ انت بليد");
+
+      // Testing
+      console.assert(0.1 + 0.2 === 0.3, "I just hate JS!");
+
+      // clearing
+      // console.clear() Nah
+
+      const p = document.querySelector("p");
+      // Viewing DOM Elements
+      console.log(p);
+      console.dir(p);
+
+      // Grouping together
+      dogs.forEach((dog) => {
+        console.groupCollapsed(`${dog.name}`);
+        console.log(`${dog.name} is ${dog.age}`);
+        console.log(
+          `${dog.name} is ${dog.age + 50} after 50 years (he won't live that long)`,
+        );
+        console.groupEnd(`${dog.name}`);
+      });
+
+      // counting
+      console.count("kinda fun");
+      console.count("kinda fun");
+      console.count("kinda fun");
+      console.count("kinda fun");
+      console.count("kinda fun");
+      console.count("kinda fun");
+      console.count("kinda fun");
+      console.count("kinda fun");
+      console.count("kinda fun");
+
+      // timing
+      console.time("fetching data");
+      fetch(
+        "https://raw.githubusercontent.com/lutangar/cities.json/refs/heads/master/cities.json",
+      )
+        .then((res) => res.json())
+        .then((data) => console.timeEnd("fetching data"));
+
+      console.table(dogs);
+    </script>
+  </body>
+</html>
