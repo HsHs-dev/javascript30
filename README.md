@@ -14,15 +14,16 @@ Also I am learning Full Stack development using _University of Helsinki_ [Full S
 
 ## 🗂 Projects
 
-| #   | Project                    | Concepts                                            |
-| :-- | :------------------------- | :-------------------------------------------------- |
-| 01  | **JavaScript Animals Kit** | DOM manipulation, audio playback, keyboard events   |
-| 02  | **JS and CSS Clock**       | `setInterval`, CSS transforms, `Date` API           |
-| 03  | **CSS Variables**          | CSS custom properties, `input` events, `dataset`    |
-| 04  | **Array Cardio**           | Practice Array functions, filter, map, reduce.. etc |
-| 05  | **Flex Panels**            | Master flex box and transitions                     |
-| 06  | **Ajax Type Ahead**        | fetch data and display them nicely                  |
-| 07  | **Array Cardio 2**         | Practice Array functions, some, every, find.. etc   |
-| 08  | **Fun with HTML5 Canvas**  | Experminting with HTML5 canvas                      |
+| #   | Project                            | Concepts                                            |
+| :-- | :--------------------------------- | :-------------------------------------------------- |
+| 01  | **JavaScript Animals Kit**         | DOM manipulation, audio playback, keyboard events   |
+| 02  | **JS and CSS Clock**               | `setInterval`, CSS transforms, `Date` API           |
+| 03  | **CSS Variables**                  | CSS custom properties, `input` events, `dataset`    |
+| 04  | **Array Cardio**                   | Practice Array functions, filter, map, reduce.. etc |
+| 05  | **Flex Panels**                    | Master flex box and transitions                     |
+| 06  | **Ajax Type Ahead**                | fetch data and display them nicely                  |
+| 07  | **Array Cardio 2**                 | Practice Array functions, some, every, find.. etc   |
+| 08  | **Fun with HTML5 Canvas**          | Experminting with HTML5 canvas                      |
+| 09  | **14 MUST know console.somestuff** | Some cool console.X                                 |
 
 ---
