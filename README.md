@@ -25,5 +25,6 @@ Also I am learning Full Stack development using _University of Helsinki_ [Full S
 | 07  | **Array Cardio 2**                 | Practice Array functions, some, every, find.. etc   |
 | 08  | **Fun with HTML5 Canvas**          | Experminting with HTML5 canvas                      |
 | 09  | **14 MUST know console.somestuff** | Some cool console.X                                 |
+| 10  | **Hold SHIFT!**                    | Hold shift to check multiple checkboxes             |
 
 ---
