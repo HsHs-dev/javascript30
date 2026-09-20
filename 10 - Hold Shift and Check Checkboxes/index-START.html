@@ -113,14 +113,10 @@
       console.log(boxes);
       boxes.forEach((box, idx) => {
         box.addEventListener("change", (e) => {
-          if (e.target.checked && shiftDown) {
+          if (shiftDown) {
             checkBetween(idx);
-            lastChecked = idx;
           }
-
-          if (e.target.checked) {
-            lastChecked = idx;
-          }
+          lastChecked = idx;
         });
       });
 
