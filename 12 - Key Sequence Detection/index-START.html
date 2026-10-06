@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Key Detection</title>
+    <script type="text/javascript" src="./cornify.js"></script>
+    <link rel="icon" href="https://fav.farm/🔥" />
+  </head>
+  <body>
+    <script>
+      const SECRET = [
+        "ArrowUp",
+        "ArrowUp",
+        "ArrowDown",
+        "ArrowDown",
+        "ArrowLeft",
+        "ArrowRight",
+        "ArrowLeft",
+        "ArrowRight",
+        "a",
+        "b",
+        "Enter",
+      ];
+      let userSecret = [];
+
+      function compareArrays(arr1, arr2) {
+        return arr1.toString() === arr2.toString();
+      }
+
+      document.addEventListener("keyup", (e) => {
+        userSecret.push(e.key);
+        // when userSecret.length is more than SECRET.length, drop the oldest (first) item
+        // Even better: if (userSecret.length > SECRET.length) userSecret.shift();
+        userSecret.splice(
+          -SECRET.length - 1, // this is just 0
+          userSecret.length - SECRET.length,
+        );
+        if (compareArrays(userSecret, SECRET)) {
+          cornify_add();
+        }
+      });
+    </script>
+  </body>
+</html>

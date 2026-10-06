@@ -27,5 +27,6 @@ Also I am learning Full Stack development using _University of Helsinki_ [Full S
 | 09  | **14 MUST know console.somestuff** | Some cool console.X                                                         |
 | 10  | **Hold SHIFT!**                    | Hold shift to check multiple checkboxes                                     |
 | 11  | **Custom HTML5 Video Player**      | Nice sliders for speed and volume, along with fullscreen toggling and more! |
+| 12  | **Konami Cheat Code**              | Having some nice easter eggs in your site                                   |
 
 ---
